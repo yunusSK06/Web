@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif,Helvetica;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif,Helvetica;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: Arial, sans-serif,Helvetica;
+            margin-bottom: 20px;
+        }
+        header {
+            background-color: #000000;
+            color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .logo {
+            margin-left: 20px;
+        }
+        .logo img {
+            height: 100px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            text-align: right;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .banner {
+            background-color: #f0f0f0; 
+            color: #000000;
+            text-align: left;
+            padding: 50px 0;
+            margin-right: 20px;
+            margin-left: 20px;
+            padding-top: 18px;
+        }
+
+        .banner h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            
+        }
+
+        .banner p {
+            font-size: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background-size: cover;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .news-flash {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: slideRightLeft 10s linear infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes slideRightLeft {
+            0% { transform: translateX(-100%); } 
+            100% { transform: translateX(100%); } 
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icon img {
+            width: 30px; 
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .news-flash {
+            background-color: #f0f0f0;
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            overflow: hidden;
+        
+        }
+
+        #flash-news {
+            font-size: 23px;
+            animation: moveLeftRight 10s linear infinite;
+            white-space: nowrap; 
+        }
+
+        @keyframes moveLeftRight {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .pics {
+            text-align: center; /* Center-align the contents */
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .photo {
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="7.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="photosgallery.html">Photos Gallery</a></li>
+                <li><a href="competitionresults.html">Competition Results</a></li>
+                <li><a href="researchpapers.html">Research Papers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="4.jpg" alt="Slide 1" width="800">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="5.jpg" alt="Slide 2" width="800">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="6.jpg" alt="Slide 3" width="800">
+        </div>
+    </section>
+    <section class="news-flash">
+        <p>Flash News:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+    </section>
+    <section class="banner">
+        <h1>Welcome to our Website</h1>
+        <p>Stay updated with the latest news and events</p>
+    <div class="pics">
+        <div class="photo"><img src="8.jpg" alt=""></div>
+        <div class="photo"><img src="9.jpg" alt=""></div>
+        <div class="photo"><img src="10.jpg" alt=""></div>
+        <div class="photo"><img src="11.jpg" alt=""></div>
+    </div>
+    </section>
+    <footer>
+        <p>Follow us on: 
+            <a href="#" class="social-icon"><img src="i.png" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
+        </p>
+        <p>Contact us: info@example.com</p>
+    </footer>
+    
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+</body>
+</html>

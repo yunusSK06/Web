@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 20px; /* Adjust as needed */
+    font-family: Arial, sans-serif; /* Optional: Change font family */
+}
+
+body{
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.logo {
+    margin-left: 20px;
+}
+.logo img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+}
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 100vh;
+    overflow: auto;
+    align-content: flex-start;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-left: 170px; /* Adjust left padding as needed */
+    padding-right: 20px; /* Add right padding */
+    padding-bottom: 20px; /* Add bottom padding */
+}
+
+
+.photo {
+    font-size: 0;
+    transition: 0.4s;
+    width: 20vw;
+    background-color: #000;
+    height: 20vh;
+    cursor: pointer;
+    margin: 10px; /* Add margin for gaps */
+}
+
+
+.photo > img {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+        object-fit: cover;
+    filter: grayscale(1);
+    opacity: 0.45;
+    transition: 0.4s;
+}
+
+.photo:hover > img {
+    opacity: 1;
+}
+
+.gallery.is-expanded {
+    overflow: hidden;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/oie_11142375wYwgAkG.png"), auto;
+}
+
+.gallery.is-expanded > .photo:not(.is-active) {
+    pointer-events: none;
+    opacity: 0.2;
+    transform: scale(0.8) skewX(6deg);
+}
+
+.photo.is-active {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    transition-duration: 0.5s;
+}
+
+.photo.photo.is-active > img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+@media (max-height: 600px) {
+    .photo {
+        width: 16.666667vw;
+        height: 16.666667vw;
+    }
+}
+
+.loading {
+    display: inline-block;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 164px;
+    text-align: center;
+    height: 64px;
+}
+
+.loading-animation {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading-animation > div{
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    -webkit-animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loading-animation > div:nth-child(2) {
+    -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+}
+
+.loading > span {
+    position: absolute;
+    top: 114%;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@-webkit-keyframes ripple {
+    0%{
+        top: 28px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100%{
+        top: -1px;
+        left: -1px;
+        width: 58px;
+        height: 58px;
+        opacity: 0;
+    }
+}
+
+
+@keyframes ripple {
+    0%{
+        top: 28px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100%{
+        top: -1px;
+        left: -1px;
+        width: 58px;
+        height: 58px;
+        opacity: 0;
+    }
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .contact-card {
+        background-color: transparent;
+        border-radius: 8px;
+        padding: 20px;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .submit-btn {
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .submit-btn:hover {
+        background-color: #333333;
+    }
+    .thanks-message {
+        display: none;
+        font-size: 18px;
+        margin-top: 20px;
+        color: #000000;
+    }
+    .logo img {
+            height: 600px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icon img {
+            width: 30px; 
+            height: 30px;
+            border-radius: 50%;
+        }
+</style>
+</head>
+<body>
+<div class="logo">
+    <img src="7.png" alt="Logo">
+</div>
+<div class="contact-card" id="contactCard">
+    <form id="contactForm">
+        <input type="text" class="text-field" placeholder="Enter your email">
+        <textarea class="text-field" placeholder="Elaborate your issue"></textarea>
+        <button type="button" class="submit-btn" onclick="submitForm()">Submit</button>
+    </form>
+    <div class="thanks-message" id="thanksMessage">Thanks for your feedback!</div>
+</div>
+
+<script>
+    function submitForm() {
+        document.getElementById("contactCard").style.display = "none";
+        document.getElementById("thanksMessage").style.display = "block";
+        setTimeout(function(){
+            window.location.href = "homepage.html";
+        }, 3000);
+    }
+</script>
+
+</body>
+<footer>
+    <p>Follow us on: 
+        <a href="#" class="social-icon"><img src="i.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
+    </p>
+    <p>Contact us: info@example.com</p>
+</footer>
+</html>
