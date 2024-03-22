@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competition Results</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    .chart {
+        margin: 20px auto;
+        width: 80%;
+        max-width: 800px;
+        height: 600px; /* Increased height for the chart container */
+        overflow-y: auto; /* Enable vertical scrolling if necessary */
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    #generateButton {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #generateButton:hover {
+        background-color: #333;
+    }
+
+    #inputName {
+        width: 90%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icon img {
+            width: 30px; 
+            height: 30px;
+            border-radius: 50%;
+        }
+
+</style>
+</head>
+<body>
+
+<h2>Competition Results</h2>
+
+<table id="dataTable">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Team Name</th>
+            <th>Title of Project</th>
+            <th>Team Leader Name</th>
+            <th>College Name</th>
+            <th>Location</th>
+            <th>Winning Status</th>
+            <th>Prize Money</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Team Alpha</td>
+            <td>Project X</td>
+            <td>John Doe</td>
+            <td>ABC University</td>
+            <td>New York</td>
+            <td>Winner</td>
+            <td>$10000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Team Beta</td>
+            <td>Project Y</td>
+            <td>Jane Smith</td>
+            <td>XYZ College</td>
+            <td>Los Angeles</td>
+            <td>Runner-up</td>
+            <td>$9000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Gama</td>
+            <td>Project Z</td>
+            <td>Hari Thakur</td>
+            <td>DEF University</td>
+            <td>New York</td>
+            <td>3rd</td>
+            <td>$7500</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Coders</td>
+            <td>Project B</td>
+            <td>Sheik Yunus</td>
+            <td>GHI University</td>
+            <td>New York</td>
+            <td>4th</td>
+            <td>$6000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Marvels</td>
+            <td>Project C</td>
+            <td>Pavan Varma</td>
+            <td>JKL University</td>
+            <td>New York</td>
+            <td>5th</td>
+            <td>$5000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Programmiz</td>
+            <td>Project D</td>
+            <td>Shaik Moseen</td>
+            <td>MNO University</td>
+            <td>New York</td>
+            <td>6th</td>
+            <td>$4000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Travels</td>
+            <td>Project Q</td>
+            <td>Mansoor Shaik</td>
+            <td>OIP University</td>
+            <td>New York</td>
+            <td>7th</td>
+            <td>$3000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Rockz</td>
+            <td>Project E</td>
+            <td>Yusuf Shaik</td>
+            <td>ABC University</td>
+            <td>New York</td>
+            <td>8th</td>
+            <td>$2500</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Coding</td>
+            <td>Project P</td>
+            <td>Madhu</td>
+            <td>ABC University</td>
+            <td>New York</td>
+            <td>9th</td>
+            <td>$2000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team Delta</td>
+            <td>Project T</td>
+            <td>Aditya Krishna</td>
+            <td>ABC University</td>
+            <td>New York</td>
+            <td>10th</td>
+            <td>$1500</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team TYU</td>
+            <td>Project U</td>
+            <td>Rupesh</td>
+            <td>ABC University</td>
+            <td>New York</td>
+            <td>11thr</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Team XYZ</td>
+            <td>Project L</td>
+            <td>Leela Krishna</td>
+            <td>VHU University</td>
+            <td>New York</td>
+            <td>12th</td>
+            <td>$500</td>
+        </tr>
+    </tbody>
+</table>
+
+<button id="generateButton">Generate Graph</button>
+
+<div class="chart" id="chartContainer">
+    <!-- Chart will be displayed here -->
+    <canvas id="myChart"></canvas>
+</div>
+<footer>
+    <p>Follow us on: 
+        <a href="#" class="social-icon"><img src="i.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
+    </p>
+    <p>Contact us: info@example.com</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.getElementById('generateButton').addEventListener('click', function() {
+        updateGraph();
+    });
+
+    function updateGraph() {
+        const tableRows = document.querySelectorAll('tbody tr');
+        const names = [];
+        const scores = [];
+
+        tableRows.forEach(row => {
+            const name = row.cells[1].textContent.trim();
+            const score = parseInt(row.cells[7].textContent.trim().replace('$', '').replace(',', ''));
+            names.push(name);
+            scores.push(score);
+        });
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: names,
+                datasets: [{
+                    label: 'Prize Money',
+                    data: scores,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        callback: function(value, index, values) {
+                            return '$' + value.toLocaleString();
+                        }
+                    }
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
